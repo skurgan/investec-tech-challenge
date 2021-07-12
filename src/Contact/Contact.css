@@ -1,0 +1,23 @@
+.body {
+    display: flex;
+    /* justify-content: flex-start; */
+    flex-direction: row;
+
+}
+
+.body img {
+}
+
+.words {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding-top: 30px;
+    font-size: 35px;
+}
+
+.text {
+    font-size: 20px;
+}
