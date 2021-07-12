@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+/* colour palette */
+
+/* light cream : #e2e2de
+dark cream : #d2d3cc
+white : #ffffff
+dark grey: #303849
+investec navy: #353f59
+black: #000000
+eggshell/lightblue: #e5ebed */
+
+.bg {
+  height: 100vh;
+  background-color: #e2e2de;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Home {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 80%;
+}
+
+.Home::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.nftImage {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 50%;
+  padding: 5px;
+  position: relative;
+}
+
+.nftPicture {
+  width: 70%;
+  height: 70%;
+  border-radius: 11px;
+}
+
+/* .nftImage img {
+  width: 50rem;
+  height: auto;
+  display: block;
+}
+.nftImage:hover:before {
+  bottom: 4rem;
+  right: 6rem;
+}
+.nftImage:hover:after {
+  top: 4rem;
+  left: 6rem;
+}
+.nftImage:before, .nftImage:after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  z-index: -1;
+  transition: 0.3s ease;
+  border-radius: 11px;
+}
+.nftImage:before {
+  background: #e2db5f;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0.6;
+  visibility: hidden;
+  transition: 1s;
+}
+.nftImage:after {
+  background: #cf97af;
+  top: 2rem;
+  left: 2rem;
+  opacity: 0.6;
+  visibility: hidden;
+  transition: 1s;
+} */
+
+
+
+.cryptoImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 5px;
+  position: relative;
+}
+
+
+.cryptoPicture {
+  width: 70%;
+  height: 70%;
+  border-radius: 11px;
+}
+
+.nftText {
+  position: absolute;
   color: white;
+  left: 18%;
+  bottom: 18%;
+  font-size: 40px;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.cryptoText {
+  position: absolute;
+  color: white;
+  left: 18%;
+  bottom: 18%;
+  font-size: 40px;
+  transition: 0.3s
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nftHidden, .cryptoHidden {
+  position: absolute;
+  width: 60%;
+  color: white;
+  left: 18%;
+  bottom: 20%;
+  visibility: hidden;
+  
 }
+
+.nftImage:hover {
+  cursor: pointer;
+}
+
+.cryptoImage:hover {
+  cursor: pointer;
+}
+
+.nftImage:hover > .nftText{
+   bottom: 50%;
+  }
+
+.nftImage:hover > .nftHidden{
+   visibility: visible;
+  }
+
+.cryptoImage:hover > .cryptoText{
+   bottom: 50%;
+  }
+
+.cryptoImage:hover > .cryptoHidden{
+   visibility: visible;
+  }
