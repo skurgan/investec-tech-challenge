@@ -1,0 +1,134 @@
+.Home {
+    display: flex;
+    height: 80%;
+  }
+  
+  .Home::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .nftImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .nftPicture {
+    width: 70%;
+    height: 70%;
+    border-radius: 11px;
+  }
+  
+  /* .nftImage img {
+    width: 50rem;
+    height: auto;
+    display: block;
+  }
+  .nftImage:hover:before {
+    bottom: 4rem;
+    right: 6rem;
+  }
+  .nftImage:hover:after {
+    top: 4rem;
+    left: 6rem;
+  }
+  .nftImage:before, .nftImage:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    z-index: -1;
+    transition: 0.3s ease;
+    border-radius: 11px;
+  }
+  .nftImage:before {
+    background: #e2db5f;
+    bottom: 2rem;
+    right: 2rem;
+    opacity: 0.6;
+    visibility: hidden;
+    transition: 1s;
+  }
+  .nftImage:after {
+    background: #cf97af;
+    top: 2rem;
+    left: 2rem;
+    opacity: 0.6;
+    visibility: hidden;
+    transition: 1s;
+  } */
+  
+  
+  
+  .cryptoImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 5px;
+    position: relative;
+  }
+  
+  
+  .cryptoPicture {
+    width: 70%;
+    height: 70%;
+    border-radius: 11px;
+  }
+  
+  .nftText {
+    position: absolute;
+    color: white;
+    left: 18%;
+    bottom: 18%;
+    font-size: 40px;
+    transition: 0.3s;
+  }
+  
+  .cryptoText {
+    position: absolute;
+    color: white;
+    left: 18%;
+    bottom: 18%;
+    font-size: 40px;
+    transition: 0.3s
+  }
+  
+  .nftHidden, .cryptoHidden {
+    position: absolute;
+    width: 60%;
+    color: white;
+    left: 18%;
+    bottom: 20%;
+    visibility: hidden;
+    
+  }
+  
+  .nftImage:hover {
+    cursor: pointer;
+  }
+  
+  .cryptoImage:hover {
+    cursor: pointer;
+  }
+  
+  .nftImage:hover > .nftText{
+     bottom: 50%;
+    }
+  
+  .nftImage:hover > .nftHidden{
+     visibility: visible;
+    }
+  
+  .cryptoImage:hover > .cryptoText{
+     bottom: 50%;
+    }
+  
+  .cryptoImage:hover > .cryptoHidden{
+     visibility: visible;
+    }
