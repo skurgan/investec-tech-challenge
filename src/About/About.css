@@ -1,0 +1,15 @@
+.bodyStructure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleText {
+    padding-top: 30px;
+    font-size: 35px;
+}
+
+.bodyText {
+    font-size: 20px;
+    max-width: 60%;
+}

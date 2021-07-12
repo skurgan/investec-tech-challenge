@@ -11,4 +11,5 @@ eggshell/lightblue: #e5ebed */
 .bg {
   height: 100vh;
   background-color: #e2e2de;
+  overflow-y: auto
 }
