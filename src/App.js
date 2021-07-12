@@ -8,12 +8,14 @@ function App() {
  const [page, setPage] = useState('Home');
 
  const getPageFunction = (data) => {
+   console.log(data);
    setPage(data);
  }
   return (
       <div class="bg">
         <Header func={getPageFunction} />
-        {page == 'Home' ? <Home/> : null }     
+        {page == 'Home' ? <Home func={getPageFunction}/> : null }  
+         
       </div>
   );
 }

@@ -34,7 +34,6 @@ const Header = props => {
 
     return(
     <div class="header">
-        {console.log(func)}
         <a href="#default" class="logo"><img src={Logo}/></a>
             <div class="header-right">
             <a className={Home ? "active" : "inactive"} href="#home" onClick={()=>onChangeHandler('Home')}>Home</a>
