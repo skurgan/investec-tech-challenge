@@ -2,15 +2,14 @@
     display: flex;
     height: 80%;
   }
-
   
-.Home::after {
+  .Home::after {
     content: "";
     clear: both;
     display: table;
   }
-
-.nftImage {
+  
+  .nftImage {
     display: flex;
     justify-content: center;
     align-items: center;
