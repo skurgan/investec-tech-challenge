@@ -6,8 +6,8 @@ import Crypto from '../Assets/crypto.jpg';
 function Home () {
     return (
         <div class="Home">
-          <div class="nftImage">
-            <img src={NFT} class="nftPicture" onClick={()=> {console.log('nft clicked')}}/>
+          <div class="nftImage" onClick={()=> {console.log('nft clicked')}}>
+            <img src={NFT} class="nftPicture" />
             <div class="nftText">NFT MARKETPLACE</div>
             <div class="nftHidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
               molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
