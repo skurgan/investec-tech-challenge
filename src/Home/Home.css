@@ -106,15 +106,17 @@
     left: 18%;
     bottom: 20%;
     visibility: hidden;
-    
+    font-size: 19px;
   }
   
   .nftImage:hover {
     cursor: pointer;
+    opacity: 0.7;
   }
   
   .cryptoImage:hover {
     cursor: pointer;
+    opacity: 0.7;
   }
   
   .nftImage:hover > .nftText{

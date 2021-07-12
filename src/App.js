@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
 import './App.css';
 import Header from './Header/Header.js';
 import Home from './Home/Home.js';
-import React, { useState } from 'react';
+import Bundles from './Bundles/Bundles.js'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       <div class="bg">
         <Header func={getPageFunction} />
         {page == 'Home' ? <Home func={getPageFunction}/> : null }  
-         
+        {page == 'CB' ? <Bundles/> : null}
       </div>
   );
 }

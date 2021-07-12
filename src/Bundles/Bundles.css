@@ -1,0 +1,103 @@
+.body {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bundles {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.lowRisk {
+    width: 90%;
+    height: 45%;
+    background: #d2d3cc;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding-top: 10px;
+}
+
+.LRBT {
+    color: white;
+    padding: 2vh 0 0 2vw;
+    font-size: 35px;
+    background: #353f59;
+    height: 10vh;
+    width: 55%;
+    border-radius: 0 10px 10px 0;
+}
+
+.LRST {
+    color: black;
+    margin: 2vh 0 0 2vw;
+    font-size: 25px;
+    border-bottom: solid 5px #353f59;
+}
+
+.LRST button {
+    border: none;
+    float: right;
+    height: 35px;
+    width: 90px;
+    background-color: #353f59;
+    color: white;
+    border-radius: 0 0 9px 9px ;
+    margin-right: 10px;
+}
+
+.LRST button:hover, .HRST button:hover {
+    cursor: pointer;
+}
+
+.highRisk {
+    width: 90%;
+    height: 45%;
+    background: #d2d3cc;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding-top: 10px;
+}
+
+.HRBT {
+    color: white;
+    padding: 2vh 0 0 2vw;
+    font-size: 35px;
+    background: #353f59;
+    height: 10vh;
+    width: 55%;
+    border-radius: 0 10px 10px 0;
+}
+
+.HRST {
+    color: black;
+    margin: 2vh 0 0 2vw;
+    font-size: 25px;
+    border-bottom: solid 5px #353f59;
+}
+
+.HRST button {
+    border: none;
+    float: right;
+    height: 35px;
+    width: 90px;
+    background-color: #353f59;
+    color: white;
+    border-radius: 0 0 9px 9px ;
+    margin: 5px 10px 0 0;
+}
+
+.textBlock {
+    width: 40%;
+    height: auto;
+    background: #e5ebed;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 10px 10px;
+}
