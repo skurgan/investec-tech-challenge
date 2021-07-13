@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import './Marketplace.css';
 import Item from './Item.js';
 import one from '../Assets/NFTs/1.jpg';
@@ -12,11 +12,12 @@ import eight from '../Assets/NFTs/8.jpg';
 import nine from '../Assets/NFTs/9.jpg';
 
 function Marketplace () {
+
     
     const [bid, setBid] = useState(false);
     const [bidValue, setBidValue] = useState(0);
-
     const [details, setDetails] = useState(["", "", ""]);
+
     const getDetailsFunction = (data) => {
         const temp = ["", "", ""];
         temp[0] = data.name;
@@ -37,13 +38,15 @@ function Marketplace () {
 
     //handles the bid button click
     const bidHandler = (name, title, price) => {
-        if (bidValue <= price) {
-            alert('That bid is too low!');
+        if (bidValue <= price || isNaN(bidValue)) {
+            alert('That bid is too low or is not numerical');
         } else {
+            alert('bid placed successfully!')
         let i = 0;
             for (i; i < images.length; i++) { 
                 if (images[i][1] == title) {
                     images[i] = [name, title, bidValue];
+                    setDetails([name, title, bidValue]);
                     break;
                 }
               }
