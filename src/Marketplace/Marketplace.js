@@ -12,16 +12,40 @@ import eight from '../Assets/NFTs/8.jpg';
 import nine from '../Assets/NFTs/9.jpg';
 
 function Marketplace () {
+    
+    const [bid, setBid] = useState(false);
+
+    const [details, setDetails] = useState(["", "", ""]);
+    const getDetailsFunction = (data) => {
+        const temp = ["", "", ""];
+        temp[0] = data.name;
+        temp[1] = data.title;
+        temp[2] = data.price;
+        setDetails(temp);
+        setBid(true);
+      }
 
     const images = [[one, "mountain lady", 0.1234], [two, "robo-head", 0.2312], [three, "egg or the man?", 0.2134]
     , [four, "doggie", 0.8273], [five, "cave dwelling", 0.4577], [six, "half a woman", 0.7623]
     , [seven, "splooooosh", 0.0237], [eight, "scenic planet", 0.7283], [nine, "crypto kitty", 0.2386]];
     //mapping the images onto custom Item component
     const gallery = images.map((index) =>
-        <Item name={index[0]} title={index[1]} price={index[2]}/>
+        <Item name={index[0]} title={index[1]} price={index[2]} run={getDetailsFunction}/>
     );
 
     return(
+        <>
+        {/* pop up */}
+        <div class={bid ? "backdrop" : "backdropHidden"} onClick={()=>setBid(false)}/>
+            <div class={bid ? "details" : "backdropHidden"}>
+                <div class="showcase">
+                    <img src={details[0]}/>
+                </div>
+                <div class="bidArea">
+
+                </div>
+            </div>
+        {/* pop up */}
         <div class="area">
            <div class = "filters">
                 <div class="bigText"> Filter by </div>
@@ -57,12 +81,14 @@ function Marketplace () {
                             <option value="6">Price (Asc)</option>
                         </select>
                     </div>
+                    <button>My Gallery</button>
                 </div>
             <div class="gallery">
                 {gallery}
             </div>
            </div>
         </div>
+        </>
     );
 }
 

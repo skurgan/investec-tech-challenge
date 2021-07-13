@@ -12,7 +12,6 @@ function App() {
  const [page, setPage] = useState('Home');
 
  const getPageFunction = (data) => {
-   console.log(data);
    setPage(data);
  }
   return (
