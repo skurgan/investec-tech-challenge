@@ -171,6 +171,10 @@
     margin-right: 5%;
 }
 
+.comboBoxContainer button:hover {
+   cursor: pointer;
+}
+
 .comboBox {
     display: flex;
     flex-direction: column;

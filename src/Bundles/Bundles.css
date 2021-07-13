@@ -101,3 +101,82 @@
     justify-content: center;
     padding: 10px 10px;
 }
+/* pop up */
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 0;
+}
+
+.backHidden {
+    display: none;
+}
+
+.dets {
+    height: 400px;
+    width: 30%;
+    background: #e5ebed;
+    opacity: 1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.investArea {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.investArea input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #353f59;
+    margin-top: 60px;
+    height: 30px;
+    background-color: #e5ebed;
+    width: 200px;
+  }
+  .investArea input:focus {
+    border-color: red;
+  }
+
+  .investArea button {
+      background-color: #353f59;
+      color: white;
+      border-radius: 7px;
+      width: 140px;
+      height: 40px;
+      margin-top: 30px;
+  }
+
+  .investArea button:hover {
+      cursor: pointer;
+  }
+
+  .exitInvest {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 90%;
+    text-decoration: underline;
+  }
+
+  .exitInvest span:hover {
+    cursor: pointer;
+  }
