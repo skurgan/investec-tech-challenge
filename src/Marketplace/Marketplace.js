@@ -62,6 +62,7 @@ function Marketplace () {
                     <img src={details[0]}/>
                 </div>
                 <div class="bidArea">
+                    <div class="exit"><span onClick={()=>setBid(false)}>close</span></div>
                     <h2>{details[1]}</h2>
                     <div>14h left...</div>
                     <div style={{marginTop:"50px"}}>Current price : <span style={{color:"red"}}>{details[2]}</span></div>

@@ -76,6 +76,18 @@
       cursor: pointer;
   }
 
+  .exit {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 90%;
+    text-decoration: underline;
+  }
+
+  .exit span:hover {
+    cursor: pointer;
+  }
+
 
 .area {
     display: flex;
@@ -175,7 +187,7 @@
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 230px);
+    grid-template-columns: repeat(4, 25%);
     row-gap: 20px;
     padding-top: 2%;
     padding-left: 2%;

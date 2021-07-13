@@ -34,7 +34,7 @@ const Header = props => {
 
     return(
     <div class="header">
-        <a href="#default" class="logo"><img src={Logo}/></a>
+        <a href="#default" class="logo"><img src={Logo} onClick={()=>onChangeHandler('Home')}/></a>
             <div class="header-right">
             <a className={Home ? "active" : "inactive"} href="#home" onClick={()=>onChangeHandler('Home')}>Home</a>
             <a className={Contact ? "active" : "inactive"} href="#contact" onClick={()=>onChangeHandler('Contact')}>Contact</a>
