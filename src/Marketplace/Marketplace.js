@@ -65,7 +65,7 @@ function Marketplace () {
                     <div class="exit"><span onClick={()=>setBid(false)}>close</span></div>
                     <h2>{details[1]}</h2>
                     <div>14h left...</div>
-                    <div style={{marginTop:"50px"}}>Current price : <span style={{color:"red"}}>{details[2]}</span></div>
+                    <div style={{marginTop:"50px"}}>Current price : <span style={{color:"red"}}>{details[2]}</span> BTC</div>
                     <div><input placeholder="Enter Bid" onChange={(event)=>setBidValue(event.target.value)}/></div>
                     <button onClick={()=>bidHandler(details[0],details[1], details[2])}>PLACE BID</button>
                 </div>
