@@ -46,8 +46,36 @@
 .bidArea {
     height: 95%;
     width: 30%;
-    /* background: red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
+.bidArea input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #353f59;
+    margin-top: 60px;
+    height: 30px;
+    background-color: #e5ebed;
+  }
+  .bidArea input:focus {
+    border-color: red;
+  }
+
+  .bidArea button {
+      background-color: #353f59;
+      color: white;
+      border-radius: 7px;
+      width: 140px;
+      height: 40px;
+      margin-top: 30px;
+  }
+
+  .bidArea button:hover {
+      cursor: pointer;
+  }
+
 
 .area {
     display: flex;

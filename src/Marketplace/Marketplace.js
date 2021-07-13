@@ -14,6 +14,7 @@ import nine from '../Assets/NFTs/9.jpg';
 function Marketplace () {
     
     const [bid, setBid] = useState(false);
+    const [bidValue, setBidValue] = useState(0);
 
     const [details, setDetails] = useState(["", "", ""]);
     const getDetailsFunction = (data) => {
@@ -28,10 +29,26 @@ function Marketplace () {
     const images = [[one, "mountain lady", 0.1234], [two, "robo-head", 0.2312], [three, "egg or the man?", 0.2134]
     , [four, "doggie", 0.8273], [five, "cave dwelling", 0.4577], [six, "half a woman", 0.7623]
     , [seven, "splooooosh", 0.0237], [eight, "scenic planet", 0.7283], [nine, "crypto kitty", 0.2386]];
+
     //mapping the images onto custom Item component
     const gallery = images.map((index) =>
         <Item name={index[0]} title={index[1]} price={index[2]} run={getDetailsFunction}/>
     );
+
+    //handles the bid button click
+    const bidHandler = (name, title, price) => {
+        if (bidValue <= price) {
+            alert('That bid is too low!');
+        } else {
+        let i = 0;
+            for (i; i < images.length; i++) { 
+                if (images[i][1] == title) {
+                    images[i] = [name, title, bidValue];
+                    break;
+                }
+              }
+        }
+    }
 
     return(
         <>
@@ -42,7 +59,11 @@ function Marketplace () {
                     <img src={details[0]}/>
                 </div>
                 <div class="bidArea">
-
+                    <h2>{details[1]}</h2>
+                    <div>14h left...</div>
+                    <div style={{marginTop:"50px"}}>Current price : <span style={{color:"red"}}>{details[2]}</span></div>
+                    <div><input placeholder="Enter Bid" onChange={(event)=>setBidValue(event.target.value)}/></div>
+                    <button onClick={()=>bidHandler(details[0],details[1], details[2])}>PLACE BID</button>
                 </div>
             </div>
         {/* pop up */}
