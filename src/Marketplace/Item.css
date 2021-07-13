@@ -1,0 +1,16 @@
+.block img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 5px solid transparent;
+}
+
+.block img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    border-bottom: 5px solid rgb(212, 89, 89);
+}
+
+.bottomText {
+    text-transform: capitalize;
+}
